@@ -1,0 +1,24 @@
+<div class="sidebar">
+    <ul class="accordion" ng-show="linkData">
+    <li class="list-item" ng-repeat="link in linkData">
+      <h4>
+        <a ng-href="{{ link.href }}" ng-if="link.href">{{ link.title }}</a>
+        <span ng-if="!link.href">{{ link.title }}</span>
+      </h4>
+      <ul class="sublist submenu" ng-show="link.sublinks">
+        <li  ng-repeat="sublink in link.sublinks">
+	<a  du-smooth-scroll du-scrollspy  ng-if="!sublink.sublinks" ng-href="{{ sublink.href }}">{{ sublink.title }}</a>
+          <div ng-if="sublink.sublinks">
+            <div class="subtitle" ng-if="!sublink.href">{{ sublink.title }}</div>
+            <a du-smooth-scroll du-scrollspy class="subtitle" ng-if="sublink.href" ng-href="{{ sublink.href }}">{{ sublink.title }}</a>
+            <ul class="sublist submenu">
+              <li ng-repeat="sublink in sublink.sublinks">
+                <a  du-smooth-scroll du-scrollspy ng-href="{{ sublink.href }}">{{ sublink.title }}</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
