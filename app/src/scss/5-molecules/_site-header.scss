@@ -1,0 +1,92 @@
+﻿// Global Header
+// --------------------------------------------------
+
+.site-header__logo-container {
+	margin-top: 26px;
+	img {
+		width: 100%; // makes IE happy to explicitly set 100% width -- set global?
+	}
+}
+.site-header__search-container {
+	height: 88px;
+	border-left: 1px solid $gray7;
+	border-right: 1px solid $gray7;
+}
+.site-header__main-search {
+	background: url(../Images/icon_magglass.svg) no-repeat scroll 5px 9px;
+	background-size: 20px 16px;
+	margin-top: 26px;
+	padding-left: 30px;
+	border: none;
+	box-shadow: none;
+	color: $gray-primary;
+}
+.site-header__account-info {
+	color: $gray3;
+	background: url(../Images/icon_down_caret_gray.svg) no-repeat;
+	background-size: 10px 100%;
+	background-position: right;
+	font-size: 11px;
+	margin-top: 30px;
+}
+
+.site-header__account-info__account-name {
+	font-size: 13px;
+}
+
+.site-header__bottom {
+	background-color: $primary-color;
+	box-shadow: 0 3px 3px $gray-secondary;
+}
+
+.nav > li > a {
+	padding: 20px 0 10px 0;
+	margin-right: 40px;
+}
+
+.site-header__top-navigation__link {
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: white;
+	text-transform: uppercase;
+	border-bottom: 3px solid transparent;
+	&:hover {
+		color: white;
+		background: transparent;
+		border-bottom-color: white;
+	}
+}
+
+// override bootstrap background hover
+.nav > li > a:hover, .nav > li > a {
+	&:hover, &:focus {
+		background: transparent;
+	}
+}
+
+.site-header__shopping-cart {
+	margin: 10px 0;
+	background: url(../Images/icon_down_caret.svg) no-repeat;
+	background-size: 10px 100%;
+	background-position: right;
+}
+
+.site-header__shopping-cart__info {
+	color: white;
+	display: inline-block;
+	background: url(../Images/icon_cart.svg) no-repeat;
+	background-size: 32px 100%;
+	background-position: left;
+	padding-left: 42px;
+	font-size: 11px;
+}
+
+.site-header__shopping-cart__info__title {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.site-header__shopping-cart__info__total {
+	margin-left: 12px;
+}

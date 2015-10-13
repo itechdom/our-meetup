@@ -1,0 +1,25 @@
+/*****************************
+ Code Sample
+ A block of code to be displayed along with a live
+ example.
+*****************************/
+
+.code-sampler {
+  margin: 0 0 20px 0;
+}
+
+.code-sampler-code {
+  @include clearfix;
+  height: 100px;
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  pre {
+    opacity: 1;
+  }
+}
+
+.code-sampler-demo {
+  padding: 10px;
+  padding-left: 0;
+}

@@ -1,0 +1,14 @@
+<nav>
+  <div class="nav-content">
+    <ul class="nav-collapse">
+   <li class="logo">
+    <a ui-sref="index" href="#/">
+	    <img ng-src="{{logo}}" alt="">
+    </a>
+  </li>
+      <li ng-repeat="link in links">
+        <a ng-href="{{link.href}}" ng-class="{ active: isActive(link) }">{{link.title}}</a>
+      </li>
+    </ul>
+  </div>
+</nav>

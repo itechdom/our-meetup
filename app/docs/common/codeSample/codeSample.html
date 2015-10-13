@@ -1,0 +1,9 @@
+<div ng-click="active = !active" class="code-sample">
+	<div class="code-sample-demo" ng-transclude>
+	</div>
+	<div class="code-sample-code" ng-class="{ 'inactive':!active }">
+    <!-- whitespace inside <pre> element is relevant, so don't put
+         a line break before the opening <code> tag or after the closing </code> tag -->
+		<pre class="language-markup"><code highlight-syntax>Loading...</code></pre>
+	</div>
+</div>

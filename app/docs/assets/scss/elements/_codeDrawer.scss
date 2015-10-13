@@ -1,0 +1,27 @@
+/*****************************
+ Code Drawer
+ An expandable/collapsible drawer to hide/reveal
+ longer snippets of code.
+*****************************/
+
+.drawer .code-sample-demo {
+  cursor: pointer;
+}
+
+.drawer .code-sample-code {
+  opacity: 1;
+  @include transition(height,0.30s,ease-out);
+
+  pre {
+    opacity: 1;
+  }
+
+  &.inactive {
+    height: 0;
+
+    pre {
+      @include transition(opacity,1s,ease-out);
+      opacity: 0;
+    }
+  }
+}

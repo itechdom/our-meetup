@@ -1,0 +1,251 @@
+﻿.icon{
+  display: block;
+  text-indent: -9999px;
+  width: 30px;
+  height: 30px;
+  background-size: 100px 82px;
+}
+.icon-caret{
+@extend .icon;
+height: 5px;
+background: url(../Images/icon_down_caret.svg) no-repeat;
+}
+.icon-caret-gray{
+@extend .icon;
+height: 5px;
+background: url(../Images/icon_down_caret_gray.svg) no-repeat;
+}
+
+.icon-caret-blue{
+@extend .icon;
+height: 5px;
+background: url(../Images/icon_down_caret_blue.svg) no-repeat;
+}
+
+.icon-arrow-right-blue{
+@extend .icon;
+width: 15px;
+background: url(../Images/icon_arrow_right_blue.svg) no-repeat;
+}
+
+.icon-shopping-cart{
+@extend .icon;
+background: url(../Images/icon_cart.svg) no-repeat;
+}
+.icon-mwi-logo{
+@extend .icon;
+background: url(../Images/icon_mwi_logo.svg) no-repeat;
+width:200px;
+}
+.icon-mag-glass{
+@extend .icon;
+background: url(../Images/icon_magglass.svg) no-repeat;
+}
+
+
+// Icomoon Icons
+
+.icon-cart .path1:before {
+	content: "\e600";
+	color: rgb(71, 164, 220);
+}
+.icon-cart .path2:before {
+	content: "\e601";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+.icon-down-caret:before {
+	content: "\e602";
+}
+.icon-MWI-logo .path1:before {
+	content: "\e603";
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path2:before {
+	content: "\e604";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path3:before {
+	content: "\e605";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path4:before {
+	content: "\e606";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path5:before {
+	content: "\e607";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path6:before {
+	content: "\e608";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path7:before {
+	content: "\e609";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path8:before {
+	content: "\e60a";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path9:before {
+	content: "\e60b";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path10:before {
+	content: "\e60c";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path11:before {
+	content: "\e60d";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path12:before {
+	content: "\e60e";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path13:before {
+	content: "\e60f";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path14:before {
+	content: "\e610";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path15:before {
+	content: "\e611";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path16:before {
+	content: "\e612";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path17:before {
+	content: "\e613";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path18:before {
+	content: "\e614";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path19:before {
+	content: "\e615";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path20:before {
+	content: "\e616";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path21:before {
+	content: "\e617";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path22:before {
+	content: "\e618";
+	margin-left: -5.6064453125em;
+	color: rgb(4, 86, 154);
+}
+.icon-MWI-logo .path23:before {
+	content: "\e619";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-MWI-logo .path24:before {
+	content: "\e61a";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-MWI-logo .path25:before {
+	content: "\e61b";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-MWI-logo .path26:before {
+	content: "\e61c";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-MWI-logo .path27:before {
+	content: "\e61d";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-MWI-logo .path28:before {
+	content: "\e61e";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-MWI-logo .path29:before {
+	content: "\e61f";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-MWI-logo .path30:before {
+	content: "\e620";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-MWI-logo .path31:before {
+	content: "\e621";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-MWI-logo .path32:before {
+	content: "\e622";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-MWI-logo .path33:before {
+	content: "\e623";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-MWI-logo .path34:before {
+	content: "\e624";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-MWI-logo .path35:before {
+	content: "\e625";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-MWI-logo .path36:before {
+	content: "\e626";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-MWI-logo .path37:before {
+	content: "\e627";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-MWI-logo .path38:before {
+	content: "\e628";
+	margin-left: -5.6064453125em;
+	color: rgb(1, 2, 2);
+}
+.icon-search:before {
+	content: "\e629";
+}

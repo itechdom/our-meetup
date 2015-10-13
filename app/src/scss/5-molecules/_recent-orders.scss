@@ -1,0 +1,14 @@
+﻿// Recent Orders Dashboard Module
+// --------------------------------------------------
+
+.recent-order {
+	margin: 35px 0 5px 0;
+	.title {
+		margin-bottom: 5px; // create space below title
+		display: inline-block;
+	}
+	.status {
+		margin-top:	6px; // line status to same baseline as title
+		display: inline-block;
+	}
+}

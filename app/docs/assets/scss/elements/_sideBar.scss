@@ -1,0 +1,92 @@
+/*****************************
+ Core Guide Sidebar
+*****************************/
+
+.sidebar {
+  padding-bottom: 0;
+  z-index: 200;
+  width: 200px;
+  left: 60px;
+  right: 92px;
+  position:fixed!important;
+  background-color: $sidebar-bkgd-color;
+  overflow: auto;
+  border-right:1px solid;
+}
+
+.sidebar .logo {
+  padding: 20px;
+}
+
+.sidebar ul {
+  padding-left: 15px;
+}
+
+.sidebar ul li {
+  list-style: none;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  text-transform:uppercase;
+  > h4{
+	  color:$sidebar-link-color;
+  }
+}
+
+.sidebar ul li a {
+  color: $sidebar-link-color;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: none;
+  color: darken($sidebar-link-color, 20%);
+}
+
+.sidebar ul li .subtitle {
+  color:$sidebar-link-color;
+  font-size: 16px;
+}
+
+ul.sublist {
+  padding-left: 10px;
+}
+
+ul.sublist li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul.sublist > li > a{
+  color: $sidebar-link-color;
+  font-size: 16px;
+  margin-left: 0;
+  padding-left: 0;
+  text-transform:uppercase; 
+}
+
+ul.sublist > li ul.sublist > li > a {
+  font-size: 14px;
+}
+
+.sidebar-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+  background-color: #BFBFBF;
+}
+
+.sidebar-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+  background-color: #BFBFBF;
+}

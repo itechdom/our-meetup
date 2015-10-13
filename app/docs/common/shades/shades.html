@@ -1,0 +1,7 @@
+<div style="background-color:{{shadesData.data[0].hex}};" class="color-block">
+	<h5>{{shadesData.displayName}}</h5>
+	<div style="background-color:{{shade.hex}}" class="color-details" ng-repeat="shade in shadesData.data">
+		<p>{{shade.weight}}</p>
+		<p>{{shade.hex | uppercase}}</p>
+	</div>
+</div>

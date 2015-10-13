@@ -1,0 +1,31 @@
+.template-sampler {
+  margin-bottom: 4em;
+
+  .nav {
+    .separator {
+      border-left: solid 1px #ccc;
+      margin: 0 1em;
+      padding: 10px 0;
+      cursor: default;
+    }
+    .info-text {
+      float: right;
+    }
+    a {
+      cursor: pointer;
+    }
+  }
+
+
+  .frame {
+    border: dashed 1px #ccc;
+    background: url(../images/striped-bg.png);
+  }
+  iframe {
+    width: 100%;
+    margin-bottom: -5px;
+    overflow: auto;
+  }
+
+
+}

@@ -1,0 +1,46 @@
+ul.list {
+  list-style: none;
+  padding-left: 15px;
+
+  li {
+    color: $gray1;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 20px;
+
+    // list-style-image hypothetically has some cross-browser issues,
+    // so this method is more likely to have correct results
+    padding-left: 15px;
+    background: url("../images/bullet.png") no-repeat 0 5px;
+  }
+
+  a {
+  }
+
+}
+
+.list-item-header {
+  display: inline;
+  color: $gray1;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 2px 0 0;
+  text-shadow: none;
+}
+
+.list-item-content {
+  display: inline;
+  margin-bottom: 10px;
+
+  & + .list-item-content {
+    // second list-item-content, to make up for the lost margin-bottom: 10px on the first inline item
+    display: block; // 2nd and later ones
+    margin-top: 10px;
+  }
+}
+
+.inline-list {
+  li {
+    display: inline-block;
+  }
+}
