@@ -14,9 +14,6 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 require('angular-bootstrap');
 
-//require css
-//require('./assets/scss/app.scss');
-//require('src/scss/main.scss');
 
 //import appComponent and Controller
 import appComponent from './app.component.js';
@@ -32,12 +29,10 @@ import components from './components/components.js'
 let app = angular.module('app', [
 		uiRouter,
 		"ui.bootstrap",
-		Common.name,
 		components.name
 		])
 .config( appConfig )
 	.directive('app',appComponent)
-	.value('clientCoreColors',colors)
 	.value('appLinks',appLinks)
 	.controller(appController);
 
@@ -50,7 +45,7 @@ let app = angular.module('app', [
 				controller:appController,
 				activeWhen: 'index'
 			})
-				.state('atoms', {
+		.state('atoms', {
 			url: '/atoms',
 			template: '<mwi-atoms></mwi-atoms>',
 			activeWhen: 'atoms',
@@ -58,15 +53,15 @@ let app = angular.module('app', [
 		})
 		.state('molecules', {
 			url: '/molecules',
-		template: "<mwi-molecules></mwi-molecules>",
-		activeWhen: 'molecules',
-		controller:appController
+			template: "<mwi-molecules></mwi-molecules>",
+			activeWhen: 'molecules',
+			controller:appController
 		})
-			.state('All', {
+		.state('All', {
 			url: '/all',
-		template: "<mwi-all></mwi-all>",
-		activeWhen: 'all',
-		controller:appController
+			template: "<mwi-all></mwi-all>",
+			activeWhen: 'all',
+			controller:appController
 		})
 
 		.state('molecules.page', {
@@ -83,5 +78,5 @@ let app = angular.module('app', [
 		controller:appController,
 		activeWhen: 'templates'
 		})
-			};
+	};
 export default app;

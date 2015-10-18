@@ -30,7 +30,7 @@ import molecules from "./molecules/molecules.js";
 import all from './all/all.js';
 
 
-let templates = angular.module('templates', [
+let components = angular.module('templates', [
 		uiRouter,
 		atoms.name,
 		molecules.name,

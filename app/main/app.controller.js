@@ -11,10 +11,9 @@
  */
 //I have commented these dependencies out
 
-let appCtrl = function DefaultCtrl($scope,clientCoreColors, appLinks, $state){
+let appCtrl = function DefaultCtrl($scope, appLinks, $state){
 
  var currentModuleName = $state.current.activeWhen;
- $scope.coreColors = clientCoreColors.palette;
  $scope.modules = appLinks;
   angular.forEach(appLinks, function (link) {
     if (link.activeWhen == currentModuleName) {

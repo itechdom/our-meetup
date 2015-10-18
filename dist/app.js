@@ -70,10 +70,6 @@
 
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 
-	//require css
-	//require('./assets/scss/app.scss');
-	//require('src/scss/main.scss');
-
 	//import appComponent and Controller
 
 	var _appComponentJs = __webpack_require__(4);
@@ -98,7 +94,7 @@
 
 	__webpack_require__(40);
 
-	var app = _angular2['default'].module('app', [_angularUiRouter2['default'], "ui.bootstrap", Common.name, _componentsComponentsJs2['default'].name]).config(appConfig).directive('app', _appComponentJs2['default']).value('clientCoreColors', colors).value('appLinks', _configAppLinks2['default']).controller(_appControllerJs2['default']);
+	var app = _angular2['default'].module('app', [_angularUiRouter2['default'], "ui.bootstrap", _componentsComponentsJs2['default'].name]).config(appConfig).directive('app', _appComponentJs2['default']).value('appLinks', _configAppLinks2['default']).controller(_appControllerJs2['default']);
 
 	function appConfig($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise("/");
@@ -33488,10 +33484,9 @@
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
-	var appCtrl = function DefaultCtrl($scope, clientCoreColors, appLinks, $state) {
+	var appCtrl = function DefaultCtrl($scope, appLinks, $state) {
 
 	  var currentModuleName = $state.current.activeWhen;
-	  $scope.coreColors = clientCoreColors.palette;
 	  $scope.modules = appLinks;
 	  angular.forEach(appLinks, function (link) {
 	    if (link.activeWhen == currentModuleName) {
@@ -33610,7 +33605,7 @@
 
 	__webpack_require__(39);
 
-	var templates = _angular2['default'].module('templates', [_angularUiRouter2['default'], _atomsAtomsJs2['default'].name, _moleculesMoleculesJs2['default'].name, _allAllJs2['default'].name]);
+	var components = _angular2['default'].module('templates', [_angularUiRouter2['default'], _atomsAtomsJs2['default'].name, _moleculesMoleculesJs2['default'].name, _allAllJs2['default'].name]);
 
 	exports['default'] = components;
 	module.exports = exports['default'];
