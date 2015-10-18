@@ -100,7 +100,7 @@
 		$urlRouterProvider.otherwise("/");
 		$stateProvider.state('index', {
 			url: '/',
-			template: '<mwi-overview></mwi-overview>',
+			template: '<app></app>',
 			controller: _appControllerJs2['default'],
 			activeWhen: 'index'
 		}).state('atoms', {
@@ -33462,7 +33462,7 @@
 /* 5 */
 /***/ function(module, exports) {
 
-	module.exports = "\t<div ui-view>\n\t</div>\n"
+	module.exports = "<div ui-view>\n\t</div>\n"
 
 /***/ },
 /* 6 */

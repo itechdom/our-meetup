@@ -41,7 +41,7 @@ let app = angular.module('app', [
 		$stateProvider
 			.state('index', {
 				url: '/',
-				template: '<mwi-overview></mwi-overview>',
+				template: '<app></app>',
 				controller:appController,
 				activeWhen: 'index'
 			})
