@@ -38,7 +38,7 @@ a:hover {
 
 // Typography - Scale
 // --------------------------------------------------
-h1,h2,h3 { font-family: $secondary-font-family; }
+h1,h2,h3 {  }
 
 h1 { font-size: 46px; }
 h2 { font-size: 38px; }
@@ -48,7 +48,6 @@ h5 { font-size: 16px; }
 h6 { font-size: 14px; }
 
 html, body {
-	font-family: $primary-font-family;
 	font-size: 12px;
 	box-sizing: border-box;
 	text-rendering: optimizeLegibility;
