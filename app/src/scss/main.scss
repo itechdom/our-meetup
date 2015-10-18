@@ -24,7 +24,7 @@ BEM
 
 @import "1-settings/_bootstrap-variable-override.scss"; // overrides default bootstrap variables
 
-@import "0-vendor/_bootstrap.scss";
+@import "0-vendor/_vendor.scss";
 
 // ----------------------------------------------------------
 // 1-SETTINGS: global settings, configuration, brand colors, etc.

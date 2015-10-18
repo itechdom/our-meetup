@@ -5,7 +5,6 @@ let template = require('./all.html');
 
 let allLinks = require('./all.links.js');
 
-import settings from '../settings/settings.js';
 import atoms from '../atoms/atoms.js';
 import molecules from '../molecules/molecules.js';
 
@@ -19,7 +18,6 @@ let allComponent = function(){
 };
 
 let all = angular.module('all', [
-		settings.name,
 		atoms.name,
 		molecules.name
 		])

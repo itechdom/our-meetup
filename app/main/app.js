@@ -24,6 +24,8 @@ import appController from './app.controller.js';
 
 import appLinks from './config/appLinks'
 
+require("../src/scss/main.scss")
+
 //import components which includes all the src components
 import components from './components/components.js'
 
@@ -48,19 +50,7 @@ let app = angular.module('app', [
 				controller:appController,
 				activeWhen: 'index'
 			})
-		.state('changelog', {
-			url: '/changelog',
-			template: require('./components/overview/changelog/changelog.html'),
-			controller:appController,
-			activeWhen: 'index'
-		})
-		.state('settings', {
-			url: '/settings',
-			template: '<mwi-settings></mwi-settings>',
-			activeWhen: 'settings',
-			controller:appController
-		})
-		.state('atoms', {
+				.state('atoms', {
 			url: '/atoms',
 			template: '<mwi-atoms></mwi-atoms>',
 			activeWhen: 'atoms',
@@ -72,14 +62,7 @@ let app = angular.module('app', [
 		activeWhen: 'molecules',
 		controller:appController
 		})
-		.state('base', {
-			url: '/base',
-		template: "<mwi-base></mwi-base>",
-		activeWhen: 'base',
-		controller:appController
-		})
-
-		.state('All', {
+			.state('All', {
 			url: '/all',
 		template: "<mwi-all></mwi-all>",
 		activeWhen: 'all',
@@ -100,20 +83,5 @@ let app = angular.module('app', [
 		controller:appController,
 		activeWhen: 'templates'
 		})
-
-		.state('uxguidelines', {
-			url: '/uxguidelines',
-		template:require('./components/uxguidelines/uxguidelines.html'),
-		controller:appController,
-		activeWhen: 'uxguidelines'
-		})
-		.state('uxguidelines.page', {
-			url: '/:id',
-		template: function ($stateParams) {
-			var page = require('./components/uxguidelines/' + $stateParams.id.replace('.', '/') + '.html')
-			return page;
-		},
-		activeWhen: 'uxguidelines'
-		});
-	};
+			};
 export default app;
