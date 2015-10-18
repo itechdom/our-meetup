@@ -2,7 +2,7 @@ var path = require("path");
 var webpack = require("webpack");
 module.exports = {
 	entry:{
-		      docs:'./app/app.js'
+		      app:'./app/main/app.js'
 	      },
 	output: {
 			path: __dirname + "/dist",
