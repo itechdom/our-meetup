@@ -13,9 +13,11 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 require('angular-bootstrap');
+require("font-awesome/scss/font-awesome.scss");
 require("./scss/main.scss");
 import srcComponent from './src.component.js';
 import srcController from './src.controller.js';
+
 
 let app = angular.module('app', [
     uiRouter,
@@ -29,7 +31,10 @@ function appConfig ($stateProvider,$urlRouterProvider ) {
     $stateProvider
         .state('index', {
             url: '/',
-            template: '<app></app>',
+            template: function ($stateParams) {
+                var page = require('./views/templates/sidebar-template/sidebar-template.html')
+                return page;
+            },
             controller:srcController,
             activeWhen: 'index'
         })
@@ -40,18 +45,13 @@ function appConfig ($stateProvider,$urlRouterProvider ) {
             controller:srcController
         })
         .state('molecules', {
-            url: '/molecules',
-            template: "<mwi-molecules></mwi-molecules>",
-            activeWhen: 'molecules',
-            controller:srcController
-        })
-        .state('molecules.page', {
-            url: '/:id',
+            url: '/molecules/:id',
             template: function ($stateParams) {
-                var page = require('./views/molecules/' + $stateParams.id.replace('.', '/') + '.html')
+                var page = require('./views/molecules/' + $stateParams.id.replace('.', '/') + '.html');
                 return page;
             },
-            activeWhen: 'molecules'
+            activeWhen: 'molecules',
+            controller:srcController
         })
         .state('templates', {
             url: '/templates',
