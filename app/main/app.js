@@ -45,38 +45,5 @@ let app = angular.module('app', [
 				controller:appController,
 				activeWhen: 'index'
 			})
-		.state('atoms', {
-			url: '/atoms',
-			template: '<mwi-atoms></mwi-atoms>',
-			activeWhen: 'atoms',
-			controller:appController
-		})
-		.state('molecules', {
-			url: '/molecules',
-			template: "<mwi-molecules></mwi-molecules>",
-			activeWhen: 'molecules',
-			controller:appController
-		})
-		.state('All', {
-			url: '/all',
-			template: "<mwi-all></mwi-all>",
-			activeWhen: 'all',
-			controller:appController
-		})
-
-		.state('molecules.page', {
-			url: '/:id',
-		template: function ($stateParams) {
-			var page = require('./components/molecules/' + $stateParams.id.replace('.', '/') + '.html')
-			return page;
-		},
-		activeWhen: 'molecules'
-		})
-		.state('templates', {
-			url: '/templates',
-		template:require('./components/templates/templates.html'),
-		controller:appController,
-		activeWhen: 'templates'
-		})
 	};
 export default app;
