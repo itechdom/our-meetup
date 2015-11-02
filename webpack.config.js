@@ -2,8 +2,7 @@ var path = require("path");
 var webpack = require("webpack");
 module.exports = {
 	entry:{
-		      app:'./app/main/app.js',
-		      src:'./app/src/src.js'
+		      dist:'./app/client/main.js'
 	      },
 	output: {
 			path: __dirname + "/dist",
@@ -14,7 +13,7 @@ module.exports = {
 			modulesDirectories : ['app','node_modules','base_modules']
 		 },
 	module: {
-		loaders: [
+			loaders: [
 			{ test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'babel' },
 			{ test: /\.html$/, loader: 'raw' },
 			{ test: /\.css$/, loader: "style-loader!css-loader" },
@@ -26,8 +25,8 @@ module.exports = {
 				test: /\.scss$/,
 				loader: 'style!css!sass'
 			},
-		]
-	},
+			]
+		},
 	plugins: [
 		new webpack.ProvidePlugin({
 			// Automtically detect jQuery and $ as free var in modules
