@@ -8,38 +8,39 @@ var diff = require('virtual-dom/diff');
 var patch = require('virtual-dom/patch');
 var createElement = require('virtual-dom/create-element');
 var dispatcher = require('../dispatcher/dispatcher.js');
+var React = require('react');
+var ReactDOM = require('react-dom');
 
 
-class todoView{
+class todoView {
 
-	constructor() {
+    constructor() {
 
-		this.template = "todo";
+        //I can combine latest here and send back the template with its data
+        actions.request$.subscribe(()=> {
+            $.get('./app/client/components/todo/todo.html', function (data) {
 
+                //loading the main view ...
+                $('todo').html(data);
 
-		//I can combine latest here and send back the template with its data
-		actions.request$.subscribe(()=>{
-			$.get('./app/client/components/todo/todo.html',function(data){
-				$('todo').html(data);
-				dispatcher.customEvent.emit('viewLoaded$',data);
-			})
-			model.getTodo();
-		});
+                //loading react component
+                var view = require('./todo.view.jsx');
+                ReactDOM.render(React.createElement(view,null),document.getElementById("example"));
+                dispatcher.customEvent.emit('viewLoaded$', data);
 
-		actions.dataLoaded$.delay(500).subscribe((data)=>{
-			var data = data.map((item)=> {
-				return `<li>
-			<input class="toggle" type="checkbox" ng-model="todo.completed" ng-change="toggleCompleted(todo)">
-			<label >hello</label>
-			<button class="destroy" ng-click="removeTodo(todo)"></button>
-			</li>`;
-			});
-			data.forEach((item)=> {
-				$('.todo-list').append(item);
-			})
-		});
+            });
+            model.getTodo();
+        });
 
-	}
+        actions.dataLoaded$.delay(100).subscribe((data)=> {
+            var view = require('./todo.view.jsx');
+            ReactDOM.render(
+                React.createElement(view,{'data':data}),
+                document.getElementById("example")
+            );
+        });
+
+    }
 }
 
 module.exports = new todoView();
