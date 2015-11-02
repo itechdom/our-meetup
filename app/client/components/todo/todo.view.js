@@ -18,26 +18,29 @@ class todoView {
 
         //I can combine latest here and send back the template with its data
         actions.request$.subscribe(()=> {
-            $.get('./app/client/components/todo/todo.html', function (data) {
+
+                var ht = require('./todo.html');
 
                 //loading the main view ...
-                $('todo').html(data);
+                $('todo').html(ht);
 
                 //loading react component
                 var view = require('./todo.view.jsx');
                 ReactDOM.render(React.createElement(view,null),document.getElementById("example"));
-                dispatcher.customEvent.emit('viewLoaded$', data);
+                dispatcher.customEvent.emit('viewLoaded$', ht);
 
-            });
-            model.getTodo();
+                //get the data ...
+                model.getTodo();
         });
 
-        actions.dataLoaded$.delay(100).subscribe((data)=> {
+        actions.dataLoaded$.subscribe((data)=> {
+
             var view = require('./todo.view.jsx');
             ReactDOM.render(
                 React.createElement(view,{'data':data}),
                 document.getElementById("example")
             );
+
         });
 
     }
