@@ -1,7 +1,7 @@
 var Rx = require('rx');
 var actions = require("./todo.actions.js");
 var dispatcher = require('../dispatcher/dispatcher.js');
-var $ = require('jquery');
+
 
 class todoModel{
 

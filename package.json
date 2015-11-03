@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/itechdom/zpresent",
   "dependencies": {
+    "Polymer": "git+https://github.com/Polymer/polymer.git",
     "body": "^5.1.0",
     "browserify": "^10.2.4",
     "flat": "^1.6.0",
@@ -36,6 +37,7 @@
     "rx": "^2.5.3",
     "rx-node": "^1.0.1",
     "virtual-dom": "^2.1.1",
+    "webcomponents.js": "^0.7.2",
     "wolfy87-eventemitter": "^4.3.0"
   },
   "devDependencies": {
