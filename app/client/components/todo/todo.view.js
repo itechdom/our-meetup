@@ -23,6 +23,7 @@ class todoView {
                 //loading the main view ...
                 $('todo').html(ht);
 
+                //initialize Vue
                 var demo = new Vue({
                     el: '#demo',
                     data: {
