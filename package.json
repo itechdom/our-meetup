@@ -49,6 +49,7 @@
     "compass": "^0.1.1",
     "compass-mixins": "^0.12.7",
     "css-loader": "^0.16.0",
+    "del": "^2.0.2",
     "eslint": "^1.2.1",
     "glob": "^5.0.14",
     "gulp": "^3.9.0",
