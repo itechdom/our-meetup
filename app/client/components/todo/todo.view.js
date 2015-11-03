@@ -3,10 +3,6 @@ var $ = require('jquery');
 var Rx = require('rx');
 var actions = require('./todo.actions.js');
 var model = require('./todo.model.js');
-var h = require('virtual-dom/h');
-var diff = require('virtual-dom/diff');
-var patch = require('virtual-dom/patch');
-var createElement = require('virtual-dom/create-element');
 var dispatcher = require('../dispatcher/dispatcher.js');
 
 
@@ -19,15 +15,21 @@ var dispatcher = require('../dispatcher/dispatcher.js');
 
 class todoView {
 
+    //abstracts stuff here
+    getTodo(){
+       return model.getTodo;
+    }
     constructor() {
 
         //I can combine latest here and send back the template with its data
         actions.request$.subscribe(()=> {
 
-                var ht = require('./todo.html');
+                //var ht = require('./todo.html');
+                //
+                ////loading the main view ... there should be a module that handle compiling the view and recompiling it
+                // the compile function takes in an object and a view and applies them to each other?
+                //$('todo').html(ht);
 
-                //loading the main view ... there should be a module that handle compiling the view and recompiling it
-                $('todo').html(ht);
 
                 //get the data ...
                 model.getTodo();
