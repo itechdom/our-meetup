@@ -17,7 +17,7 @@ class todoView {
         //I can combine latest here and send back the template with its data
         actions.request$.subscribe(()=> {
 
-                var ht = require('./todo.html');
+                var ht = require('./todo.raw.html');
 
                 //loading the main view ...
                 $('todo').html(ht);

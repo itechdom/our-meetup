@@ -10,6 +10,30 @@ var todoContent = require('./todo-content/todoContent.js');
 var todoFooter = require('./todo-footer/todoFooter.js');
 var todoHeader = require('./todo-Header/todoHeader.js');
 
+/**
+ * A not-very-useful inline element
+ */
+// Create an element that takes a property
+
+try {
+	Polymer({
+		is: 'my-property-namecard',
+		properties: {
+			myName: {
+				type: String
+			}
+		},
+		ready: function () {
+			console.log("hel");
+
+			this.textContent = 'Hi! My name is ' + this.myName;
+		}
+	});
+}
+catch(e){
+
+}
+
 class todoMain{
 
 	constructor(){

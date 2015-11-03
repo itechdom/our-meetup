@@ -32,7 +32,7 @@ module.exports = {
             }
         ],
         preLoaders: [
-            {test: /\/components\/.+\.js$/, loader: 'polymer-loader?templateExtension=html&styleExtension=style'}
+            {test: /\/app\/client\/components\/.+\.js$/, loader: 'polymer-loader?templateExtension=html&styleExtension=css'}
         ]
     },
     plugins: [
