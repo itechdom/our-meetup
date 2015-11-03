@@ -7,10 +7,15 @@
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <script src="node_modules/webcomponents.js/webcomponents.min.js"></script>
+    <!-- Imports custom element -->
+    <link rel="import" href="app/client/components/todo/todo.polymer.html">
 
 </head>
 <body>
     <todo></todo>
+    <!-- Runs custom element -->
+    <hello-world who="Unicorn"></hello-world>
     <script src="dist/dist.js"></script>
 </body>
 </html>

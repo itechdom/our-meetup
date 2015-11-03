@@ -10,7 +10,6 @@ var todoContent = require('./todo-content/todoContent.js');
 var todoFooter = require('./todo-footer/todoFooter.js');
 var todoHeader = require('./todo-Header/todoHeader.js');
 
-
 class todoMain{
 
 	constructor(){

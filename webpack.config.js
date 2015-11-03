@@ -30,6 +30,9 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel' // 'babel-loader' is also a legal name to reference
             }
+        ],
+        preLoaders: [
+            {test: /\/components\/.+\.js$/, loader: 'polymer-loader?templateExtension=html&styleExtension=style'}
         ]
     },
     plugins: [
