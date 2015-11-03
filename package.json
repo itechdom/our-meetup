@@ -36,6 +36,7 @@
     "rx": "^2.5.3",
     "rx-node": "^1.0.1",
     "virtual-dom": "^2.1.1",
+    "vue": "^1.0.4",
     "wolfy87-eventemitter": "^4.3.0"
   },
   "devDependencies": {
