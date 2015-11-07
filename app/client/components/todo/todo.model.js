@@ -1,4 +1,5 @@
 var Rx = require('rx');
+var actions = require('./todo.actions.js');
 
 class todoModel{
 
@@ -7,6 +8,10 @@ class todoModel{
 			title:"title",
 			completed:"true|false"
 		}
+		//implement all the actions
+		actions.addTodo$.subscribe((data)=>{
+			addTodo(data);
+		})
 	}
 	getTodo(){
 		return $.get("http://localhost:4000/todo");

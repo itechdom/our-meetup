@@ -11,6 +11,7 @@ var todoFooter = require('./todo-footer/todoFooter.js');
 var todoHeader = require('./todo-Header/todoHeader.js');
 var dispatcher = require('../dispatcher/dispatcher.js');
 
+
 class todoMain{
 
 	constructor(){
@@ -23,7 +24,6 @@ class todoMain{
 				view.render(data);
 				dispatcher.customEvent.emit('todo.dataLoaded$',data)
 			});
-
 		})
 		spinner.model.registerComponent(this);
 	}
