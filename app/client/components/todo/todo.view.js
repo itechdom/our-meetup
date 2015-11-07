@@ -29,8 +29,7 @@ class todoView {
                 ////loading the main view ... there should be a module that handle compiling the view and recompiling it
                 // the compile function takes in an object and a view and applies them to each other?
                 //$('todo').html(ht);
-
-
+            
                 //get the data ...
                 model.getTodo();
         });
