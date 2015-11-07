@@ -2,8 +2,6 @@
 var $ = require('jquery');
 var Rx = require('rx');
 var actions = require('./todo.actions.js');
-var model = require('./todo.model.js');
-var dispatcher = require('../dispatcher/dispatcher.js');
 
 
 // I want to be able to import some components that manipulate HTML
@@ -13,29 +11,11 @@ var dispatcher = require('../dispatcher/dispatcher.js');
 // This should provide declarative HTML in general
 class todoView {
 
-    //abstracts stuff here
-    getTodo(){
-       return model.getTodo;
+    render(data){
+	    var ht = require('./todo.html');
+	    $('todo').html(ht);
     }
     constructor() {
-
-        //I can combine latest here and send back the template with its data
-        actions.request$.subscribe(()=> {
-
-                var ht = require('./todo.html');
-                //
-                ////loading the main view ... there should be a module that handle compiling the view and recompiling it
-                // the compile function takes in an object and a view and applies them to each other?
-                $('todo').html(ht);
-            
-                //get the data ...
-                model.getTodo();
-        });
-
-        actions.dataLoaded$.subscribe((data)=> {
-		console.log(data,"from todo.view");
-
-        });
 
     }
 }

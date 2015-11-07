@@ -1,7 +1,4 @@
 var Rx = require('rx');
-var actions = require("./todo.actions.js");
-var dispatcher = require('../dispatcher/dispatcher.js');
-var $ = require('jquery');
 
 class todoModel{
 
@@ -12,9 +9,7 @@ class todoModel{
 		}
 	}
 	getTodo(){
-		$.get("http://localhost:4000/todo",function(data) {
-			dispatcher.customEvent.emit('dataLoaded$',data);
-		});
+		return $.get("http://localhost:4000/todo");
 	}
 	insertTodo(todo){
 
