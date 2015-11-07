@@ -1,6 +1,7 @@
 //this is the main todo file
 var $ = require('jquery');
 var Rx = require('rx');
+var todoView = require("../todo/todo.view.js");
 var dispatcher = require('../dispatcher/dispatcher.js');
 
 //I can also decorate the view here 
@@ -12,11 +13,15 @@ var dispatcher = require('../dispatcher/dispatcher.js');
 // This should provide declarative HTML in general
 
 
-class todoView {
-
+class todoExtendedView {
+       render(){
+	       var ht = require('./todoExtended.html');
+	       $('todo-extended').html(ht);
+	       todoView.render();
+       }
        constructor() {
 
        }
 }
 
-module.exports = new todoView();
+module.exports = new todoExtendedView();
