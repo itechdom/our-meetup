@@ -7,12 +7,12 @@ var todo = require("../todo/todo.js");
 //Or change some internal operation
 
 class todoMain{
-
 	constructor(){
 		//I need to intercept this view and modify it?
 		//I can hook into actions 
 		//and cancel the original event or defer it?
 		//or decorate it?
+		var deferred = Rx.Observable.defer(todo.actions.dataLoade$);
 	}
 }
 module.exports = new todoMain();

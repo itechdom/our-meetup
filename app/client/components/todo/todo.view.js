@@ -33,7 +33,7 @@ class todoView {
         });
 
         actions.dataLoaded$.subscribe((data)=> {
-
+		console.log(data,"from todo.view");
 
         });
 

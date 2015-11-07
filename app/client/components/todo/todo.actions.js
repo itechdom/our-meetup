@@ -7,7 +7,6 @@ var clientActions = require('../client/client.actions.js')
 class actionMain{
 
     constructor(){
-        //All the default actions for this app
         return {
             request$: clientActions['changeRoute$'].filter((d)=> {
                 return d == "/todo";

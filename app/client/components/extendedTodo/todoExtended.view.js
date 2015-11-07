@@ -1,10 +1,9 @@
 //this is the main todo file
 var $ = require('jquery');
 var Rx = require('rx');
-var actions = require('./todo.actions.js');
-var model = require('./todo.model.js');
 var dispatcher = require('../dispatcher/dispatcher.js');
 
+//I can also decorate the view here 
 
 // I want to be able to import some components that manipulate HTML
 // The basic features I am looking at is:
@@ -15,31 +14,9 @@ var dispatcher = require('../dispatcher/dispatcher.js');
 
 class todoView {
 
-    //abstracts stuff here
-    getTodo(){
-       return model.getTodo;
-    }
-    constructor() {
+       constructor() {
 
-        //I can combine latest here and send back the template with its data
-        actions.request$.subscribe(()=> {
-
-                //var ht = require('./todo.html');
-                //
-                ////loading the main view ... there should be a module that handle compiling the view and recompiling it
-                // the compile function takes in an object and a view and applies them to each other?
-                //$('todo').html(ht);
-            
-                //get the data ...
-                model.getTodo();
-        });
-
-        actions.dataLoaded$.subscribe((data)=> {
-
-
-        });
-
-    }
+       }
 }
 
 module.exports = new todoView();
