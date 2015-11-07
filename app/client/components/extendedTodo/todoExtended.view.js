@@ -11,6 +11,8 @@ var dispatcher = require('../dispatcher/dispatcher.js');
 // Data binding, just pass data to the compile function to bind data to it? what about repeater or other attributed directives?
 // Components attach themselves to either an attribute or custom element nesting?
 // This should provide declarative HTML in general
+
+
 class todoView {
 
     //abstracts stuff here
@@ -22,11 +24,11 @@ class todoView {
         //I can combine latest here and send back the template with its data
         actions.request$.subscribe(()=> {
 
-                var ht = require('./todo.html');
+                //var ht = require('./todo.html');
                 //
                 ////loading the main view ... there should be a module that handle compiling the view and recompiling it
                 // the compile function takes in an object and a view and applies them to each other?
-                $('todo').html(ht);
+                //$('todo').html(ht);
             
                 //get the data ...
                 model.getTodo();

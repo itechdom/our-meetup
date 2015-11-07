@@ -10,12 +10,13 @@ var todoContent = require('./todo-content/todoContent.js');
 var todoFooter = require('./todo-footer/todoFooter.js');
 var todoHeader = require('./todo-Header/todoHeader.js');
 
-
 class todoMain{
 
-	constructor(){
+	//@args: act => is an action that overrides others to intercept the data coming in
+	constructor(act){
 		this.actions = actions;
 		this.view = view;
+		this.views = [todoContent,todoFooter,todoHeader];
 		this.model = model;
 		spinner.model.registerComponent(this);
 	}
