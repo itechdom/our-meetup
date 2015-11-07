@@ -12,8 +12,7 @@ var todoHeader = require('./todo-Header/todoHeader.js');
 
 class todoMain{
 
-	//@args: act => is an action that overrides others to intercept the data coming in
-	constructor(act){
+	constructor(){
 		this.actions = actions;
 		this.view = view;
 		this.views = [todoContent,todoFooter,todoHeader];
