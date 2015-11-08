@@ -11,9 +11,12 @@ var actions = require('./todo.actions.js');
 // This should provide declarative HTML in general
 class todoView {
 
-    render(data){
+    render(data,element){
 	    var ht = require('./todo.html');
-	    $('todo').html(ht);
+	    element?$(element+'>todo').html(ht) : $('todo').html(ht);
+    }
+    animate(){
+
     }
     constructor() {
 
