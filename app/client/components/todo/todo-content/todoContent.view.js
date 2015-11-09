@@ -15,10 +15,14 @@ class todoView{
 
 		this.template = "todo";
 
+
+
 		//I can combine latest here and send back the template with its data
-		actions.dataLoaded$.subscribe(()=>{
+		actions.dataLoaded$.subscribe((data)=>{
 			var content = require('./todoContent.html');
 			$('todo-content').html(content);
+			dispatcher.customEvent.emit('todo-content.viewLoaded$',content);
+			dispatcher.customEvent.emit('todo-content.dataLoaded$',data);
 		});
 
 	}

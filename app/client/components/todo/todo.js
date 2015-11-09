@@ -24,7 +24,7 @@ class todoMain{
 
 		//we can make it into a better component by enabling passing of multiple
 		//actions
-		zRepeat.view.render(actions.dataLoaded$,"todo");
+		zRepeat.view.render([actions.dataLoaded$,todoContent.actions.dataLoaded$],["todo","todo-content"]);
 
 		actions.request$.subscribe(()=>{
 			model.getTodo().then(function(data){

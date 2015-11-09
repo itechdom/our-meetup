@@ -5,8 +5,8 @@ var Rx = require('rx');
 class zRepeatView{
 
     render(actions,element){
-
-        actions.subscribe((list)=>{
+        var source = Rx.Observable.merge(actions).take(1);
+        source.subscribe((list)=>{
             var repeatedElement = this.findElement(element);
             list.map((item)=>{
                 repeatedElement.parent().append(item._id);
