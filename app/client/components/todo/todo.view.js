@@ -2,6 +2,7 @@
 var $ = require('jquery');
 var Rx = require('rx');
 var actions = require('./todo.actions.js');
+var zRepeat = require('../zRepeat/zRepeat.view.js');
 
 
 // I want to be able to import some components that manipulate HTML

@@ -16,10 +16,9 @@ class todoView{
 		this.template = "todo";
 
 		//I can combine latest here and send back the template with its data
-		actions.request$.subscribe(()=>{
-			$.get('./app/client/components/todo/todo-content/todoContent.html',function(data){
-				$('todo-content').html(data);
-			})
+		actions.dataLoaded$.subscribe(()=>{
+			var content = require('./todoContent.html');
+			$('todo-content').html(content);
 		});
 
 	}
