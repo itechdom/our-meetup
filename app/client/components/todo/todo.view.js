@@ -22,15 +22,17 @@ class todoView {
 
 		var ht = require('./todo.html');
 		$('todo').html(ht);
+		var message = "hello, Vue.js!";
+
 
 		//initialize Vue
 		var demo = new Vue({
 			el: '#demo',
-		    data: {
+		    	data: {
 			    message: 'Hello Vue.js!'
-		    }
+			}
 		});
-
+		
 	}
 	constructor() {
 
