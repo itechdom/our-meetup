@@ -32,7 +32,6 @@ class todoMain{
 			});
 		});
 		spinner.model.registerComponent(this);
-
 	}
 }
 module.exports = new todoMain();
