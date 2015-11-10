@@ -11,35 +11,30 @@ var dispatcher = require('../dispatcher/dispatcher.js');
 var Vue = require('vue');
 
 
+// I want to be able to import some components that manipulate HTML
+// The basic features I am looking at is:
+// Data binding, just pass data to the compile function to bind data to it? what about repeater or other attributed directives?
+// Components attach themselves to either an attribute or custom element nesting?
+// This should provide declarative HTML in general
 class todoView {
 
-    constructor() {
+	render(){
 
-        //I can combine latest here and send back the template with its data
-        actions.request$.subscribe(()=> {
+		var ht = require('./todo.html');
+		$('todo').html(ht);
 
-                var ht = require('./todo.html');
+		//initialize Vue
+		var demo = new Vue({
+			el: '#demo',
+		    data: {
+			    message: 'Hello Vue.js!'
+		    }
+		});
 
-                //loading the main view ...
-                $('todo').html(ht);
+	}
+	constructor() {
 
-                //initialize Vue
-                var demo = new Vue({
-                    el: '#demo',
-                    data: {
-                        message: 'Hello Vue.js!'
-                    }
-                });
-
-                //get the data ...
-                model.getTodo();
-        });
-
-        actions.dataLoaded$.subscribe((data)=> {
-
-        });
-
-    }
+	}
 }
 
 module.exports = new todoView();

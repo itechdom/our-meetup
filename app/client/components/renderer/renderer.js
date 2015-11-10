@@ -9,15 +9,13 @@ class rendererMain{
 	constructor(){
 		this.model = model;
 	}
-	//I can make render a component function
-	render(){
-		// Render the left node to a DOM node
-			 //var rootNode = createElement(leftNode)
-			 //document.body.appendChild(rootNode)
+	//take an html and render it back with all data bound?
+	dataBind(){
+		console.log(this);
+	}
+	render(view,component){
+		//render the view after patching everything ...
 
-			// Update the DOM with the results of a diff
-			 //var patches = diff(leftNode, rightNode)
-			 //patch(rootNode, patches)
 	}
 }
 

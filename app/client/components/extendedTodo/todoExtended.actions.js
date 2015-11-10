@@ -8,8 +8,11 @@ class actionMain{
     constructor(){
         //All the default actions for this app
         return {
-            request$: clientActions['request$']
+            request$: clientActions['changeRoute$'].filter((d)=> {
+                return d == "/extendedtodo";
+            }),
         }
     }
 }
 module.exports = new actionMain();
+
