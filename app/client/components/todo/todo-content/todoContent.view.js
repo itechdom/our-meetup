@@ -14,9 +14,7 @@ class todoView{
 	constructor() {
 
 		this.template = "todo";
-
-
-
+		
 		//I can combine latest here and send back the template with its data
 		actions.dataLoaded$.subscribe((data)=>{
 			var content = require('./todoContent.html');
@@ -24,7 +22,6 @@ class todoView{
 			dispatcher.customEvent.emit('todo-content.viewLoaded$',content);
 			dispatcher.customEvent.emit('todo-content.dataLoaded$',data);
 		});
-
 	}
 }
 

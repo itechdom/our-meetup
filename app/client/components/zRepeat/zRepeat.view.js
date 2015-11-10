@@ -13,9 +13,11 @@ class zRepeatView{
             });
         })
     }
-
     findElement(element){
         return $(element+">*[zrepeat]");
+    }
+    filterData(){
+
     }
 	constructor() {
 		this.template = "z-repeat";
