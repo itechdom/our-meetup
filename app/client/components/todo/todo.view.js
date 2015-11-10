@@ -20,6 +20,7 @@ class todoView {
 
     }
     constructor() {
+        this.template = 'todo';
 
     }
 }

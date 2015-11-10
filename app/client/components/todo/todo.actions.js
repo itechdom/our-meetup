@@ -13,8 +13,7 @@ class actionMain{
             }),
             viewLoaded$: Rx.Observable.fromEvent(dispatcher.customEvent,'todo.viewLoaded$'),
             dataLoaded$:Rx.Observable.fromEvent(dispatcher.customEvent,'todo.dataLoaded$'),
-	    //remote control actions
-	    addTodo$:Rx.Observable.fromEvent(dispatcher.customEvent,'todo.addTodo$')
+	        addTodo$:Rx.Observable.fromEvent(dispatcher.customEvent,'todo.addTodo$')
         }
     }
 }

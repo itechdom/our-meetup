@@ -6,23 +6,17 @@ var h = require('virtual-dom/h');
 var diff = require('virtual-dom/diff');
 var patch = require('virtual-dom/patch');
 var createElement = require('virtual-dom/create-element');
-var dispatcher = require('../../dispatcher/dispatcher.js');
 
 
-class todoView{
+class todoContentView{
 
+	render(){
+		var content = require('./todoContent.html');
+		$('todo-content').html(content);
+	}
 	constructor() {
-
-		this.template = "todo";
-		
-		//I can combine latest here and send back the template with its data
-		actions.dataLoaded$.subscribe((data)=>{
-			var content = require('./todoContent.html');
-			$('todo-content').html(content);
-			dispatcher.customEvent.emit('todo-content.viewLoaded$',content);
-			dispatcher.customEvent.emit('todo-content.dataLoaded$',data);
-		});
+		this.template = "todo-content";
 	}
 }
 
-module.exports = new todoView();
+module.exports = new todoContentView();

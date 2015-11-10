@@ -4,13 +4,12 @@ var Rx = require('rx');
 
 class zRepeatView{
 
-    render(actions,element){
-        var source = Rx.Observable.merge(actions).take(1);
-        source.subscribe((list)=>{
-            var repeatedElement = this.findElement(element);
-            list.map((item)=>{
-                repeatedElement.parent().append(item._id);
-            });
+    render(elements){
+        elements.map((element)=>{
+            element.actions.subscribe((data)=>{
+                var repeatedElement = this.findElement(element.view.template);
+                repeatedElement.append(data[0]._id);
+            })
         })
     }
     findElement(element){
@@ -20,7 +19,7 @@ class zRepeatView{
 
     }
 	constructor() {
-		this.template = "z-repeat";
+		this.template = "zrepeat";
 	}
 }
 
