@@ -14,6 +14,7 @@ var Vue = require('vue');
 // This should provide declarative HTML in general
 class todoView {
 
+
 	render(){
 
 		var ht = require('./todo.html');
