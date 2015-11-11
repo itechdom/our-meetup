@@ -7,7 +7,6 @@ var EventEmitter = require('events').EventEmitter,
 	customEvent = new EventEmitter();
 var server = require("./server.js");
 
-
 //handle one side of the request, which is initializing the globals
 server.on('request',function(req,res){
 	//I will use this custom event here instead since it will make it very easy to send throught he pipeline insted of using a global routes file;
@@ -16,6 +15,7 @@ server.on('request',function(req,res){
 	customEvent.emit('request',req);
 	customEvent.emit('response',res);
 });
+
 server.on('mount',function(req,res){
 	//I will use this custom event here instead since it will make it very easy to send throught he pipeline insted of using a global routes file;
 	customEvent.emit('mount',req);

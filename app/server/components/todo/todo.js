@@ -2,10 +2,10 @@
 var Rx = require('rx');
 var model = require('./todo.model.js');
 var view = require('./todo.view.js');
-var router = require('../router/router.js');
+var router = require('../utils/router/router.js');
 var actions = require('./todo.actions.js');
-var debug = require('../debugger/debugger.js');
-var dispatcher = require('../dispatcher/dispatcher.js');
+var debug = require('../utils/debugger/debugger.js');
+var dispatcher = require('../utils/dispatcher/dispatcher.js');
 
 
 class todoMain{

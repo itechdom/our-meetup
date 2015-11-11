@@ -3,8 +3,8 @@ var $ = require('jquery');
 var Rx = require('rx');
 var actions = require('./todo.actions.js');
 var model = require('./todo.model.js');
-var renderer = require('../renderer/renderer.js');
-var dispatcher = require('../dispatcher/dispatcher.js');
+var renderer = require('../utils/renderer/renderer.js');
+var dispatcher = require('../utils/dispatcher/dispatcher.js');
 var util = require("util");
 
 
