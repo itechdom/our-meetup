@@ -2,8 +2,6 @@
 var $ = require('jquery');
 var Rx = require('rx');
 var actions = require('../todo.actions.js');
-var dispatcher = require('../../dispatcher/dispatcher.js');
-
 
 class todoView{
 

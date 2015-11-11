@@ -5,11 +5,10 @@ var model = require('./todo.model.js');
 var view = require('./todo.view.js');
 var actions = require("./todo.actions.js");
 require("./todo.scss");
-var spinner = require('../spinner/spinner.js');
 var todoContent = require('./todo-content/todoContent.js');
 var todoFooter = require('./todo-footer/todoFooter.js');
 var todoHeader = require('./todo-Header/todoHeader.js');
-var dispatcher = require('../dispatcher/dispatcher.js');
+var dispatcher = require('../utils/dispatcher/dispatcher.js');
 var zRepeat = require('../zRepeat/zRepeat.js');
 
 
@@ -31,7 +30,6 @@ class todoMain{
 				dispatcher.customEvent.emit('todo.dataLoaded$',data)
 			});
 		});
-		spinner.model.registerComponent(this);
 	}
 }
 module.exports = new todoMain();

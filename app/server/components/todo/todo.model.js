@@ -1,6 +1,6 @@
 'use strict';
 var Rx = require('rx');
-var orm = require('../orm/orm.js');
+var orm = require('../utils/orm/orm.js');
 var mongoose = require('mongoose');
 
 

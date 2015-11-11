@@ -2,6 +2,7 @@
 var $ = require('jquery');
 var Rx = require('rx');
 var view = require('./todoFooter.view.js');
+
 class todoMain{
 
 	constructor(){
