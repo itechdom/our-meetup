@@ -4,7 +4,7 @@ var Rx = require('rx');
 var view = require('./todoContent.view.js');
 var actions = require('./todoContent.actions.js');
 var todoActions = require('../todo.actions.js');
-var dispatcher = require('../../utils/dispatcher/dispatcher.js');
+var dispatcher = require('../../lib/dispatcher/dispatcher.js');
 
 
 class todoContentMain{

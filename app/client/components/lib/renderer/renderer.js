@@ -4,6 +4,9 @@ var createElement = require("vdom/create-element");
 var patch = require("vdom/patch");
 var model = require("./renderer.model.js");
 
+
+//this could be a component that collect all the components and provide a central
+//Location to compile them
 class rendererMain{
 
 	constructor(){
