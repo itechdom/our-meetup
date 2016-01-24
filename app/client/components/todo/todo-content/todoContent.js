@@ -12,7 +12,6 @@ class todoContentMain{
     constructor(){
 		this.view = view;
 		this.actions = actions;
-
         todoActions.dataLoaded$.subscribe((data)=>{
             view.render();
             dispatcher.customEvent.emit('todo-content.dataLoaded$',[{_id:1}]);
