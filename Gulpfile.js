@@ -8,9 +8,6 @@ var options = {
   src: './app/client/main.js',
   dist: './dist/',
   main:'./app/',
-  components:'app/**/*.component.js',
-  tmp: '.tmp',
-  test:'app/**/*.spec.js',
   errorHandler: function(title) {
     return function(err) {
       gutil.log(gutil.colors.red('[' + title + ']'), err.toString());
@@ -26,5 +23,5 @@ wrench.readdirSyncRecursive('./gulp').filter(function(file) {
 });
 
 gulp.task('default', function(done){
-  sync('webpack:build-dev', 'serve:client','watch', done);
+  sync('webpack:build-dev', 'serve:client','serve:server','watch', done);
 });
